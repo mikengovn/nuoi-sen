@@ -1,0 +1,155 @@
+/* ===== Nuôi Sen — responsive, phone-friendly layout ===== */
+
+:root { --frame-max-h: 100dvh; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #0f1420;            /* dark letterbox behind the portrait game */
+  overscroll-behavior: none;      /* kill pull-to-refresh on mobile */
+  touch-action: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #fff;
+  position: fixed;                /* prevent iOS rubber-band scroll */
+  inset: 0;
+}
+
+/* Center the portrait game and let it fill the available height */
+#stage-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #12305a 0%, #0b1120 60%, #070a12 100%);
+}
+
+/* The game frame keeps the exact 736 : 1318 aspect ratio of the original */
+#game-frame {
+  position: relative;
+  aspect-ratio: 736 / 1318;
+  height: min(100dvh, calc(100vw * 1318 / 736));
+  max-height: 100dvh;
+  width: auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.05);
+  background: #bfe3ff;
+  touch-action: none;
+}
+
+/* On tall/desktop viewports, cap the width so it doesn't get huge */
+@media (min-aspect-ratio: 736/1318) {
+  #game-frame { height: 100dvh; }
+}
+
+canvas#game {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+/* ===== Corner buttons ===== */
+.corner-btn {
+  position: absolute;
+  top: max(10px, env(safe-area-inset-top));
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 20px;
+  line-height: 44px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  transition: transform .12s ease, background .2s ease;
+  user-select: none;
+}
+.corner-btn:active { transform: scale(.9); background: rgba(255,255,255,.34); }
+#btn-sound  { right: max(10px, env(safe-area-inset-right)); }
+#btn-replay { left:  max(10px, env(safe-area-inset-left)); font-size: 22px; }
+
+/* ===== Loading / Start overlay ===== */
+#overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(120% 120% at 50% 40%, rgba(140,198,255,.35), rgba(20,30,55,.82) 70%),
+    linear-gradient(180deg, rgba(10,15,30,.55), rgba(10,15,30,.82));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: opacity .5s ease;
+  text-align: center;
+  padding: 24px;
+}
+#overlay.hide { opacity: 0; pointer-events: none; }
+
+#overlay-inner { display: flex; flex-direction: column; align-items: center; gap: 14px; max-width: 84%; }
+
+#overlay-logo {
+  width: 84px; height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.35));
+  animation: floaty 3.2s ease-in-out infinite;
+}
+@keyframes floaty { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-8px) } }
+
+#overlay-title {
+  font-size: clamp(30px, 8vw, 52px);
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: #fff;
+  text-shadow: 0 3px 0 #d63a5b, 0 8px 24px rgba(214,58,91,.5);
+}
+
+#loading-wrap { width: min(260px, 70vw); margin-top: 4px; }
+#loading-track {
+  width: 100%; height: 12px; border-radius: 999px;
+  background: rgba(255,255,255,.25); overflow: hidden;
+}
+#loading-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, #ff9a5a, #ff4d6d);
+  border-radius: 999px; transition: width .18s ease;
+}
+#loading-text { margin-top: 8px; font-size: 14px; opacity: .9; }
+
+#start-btn {
+  margin-top: 6px;
+  border: none;
+  padding: 16px 34px;
+  font-size: clamp(17px, 4.6vw, 21px);
+  font-weight: 800;
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #ff6b8b, #e23a5b);
+  box-shadow: 0 10px 26px rgba(226,58,91,.5), inset 0 2px 0 rgba(255,255,255,.4);
+  animation: pulse 1.5s ease-in-out infinite;
+  user-select: none;
+}
+#start-btn:active { transform: scale(.96); }
+@keyframes pulse {
+  0%,100% { box-shadow: 0 10px 26px rgba(226,58,91,.5), inset 0 2px 0 rgba(255,255,255,.4); transform: translateY(0); }
+  50%     { box-shadow: 0 16px 34px rgba(226,58,91,.65), inset 0 2px 0 rgba(255,255,255,.4); transform: translateY(-3px); }
+}
+
+#hint { font-size: 14px; opacity: .92; margin-top: 2px; line-height: 1.5; }
+#hint b { color: #ffd0dc; }
+
+.hidden { display: none !important; }

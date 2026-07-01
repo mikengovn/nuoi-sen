@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<title>Nuôi Sen · VietMoney</title>
+<meta name="description" content="Nuôi Sen — tap to grow your lotus mascot through 9 stages. A VietMoney mini-game." />
+<meta name="theme-color" content="#8ec6ff" />
+<!-- Add-to-home-screen / app-like on mobile -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="icon" href="assets/logo.png" />
+<link rel="apple-touch-icon" href="assets/logo.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="stage-wrap">
+    <div id="game-frame">
+      <canvas id="game"></canvas>
+
+      <!-- Corner controls (shown once the game starts) -->
+      <button id="btn-replay" class="corner-btn hidden" aria-label="Chơi lại">↻</button>
+      <button id="btn-sound"  class="corner-btn hidden" aria-label="Bật/tắt âm thanh">🔊</button>
+
+      <!-- Loading + Start overlay -->
+      <div id="overlay">
+        <div id="overlay-inner">
+          <img id="overlay-logo" src="assets/logo.png" alt="VietMoney" />
+          <h1 id="overlay-title">Nuôi Sen</h1>
+          <div id="loading-wrap">
+            <div id="loading-track"><div id="loading-fill"></div></div>
+            <p id="loading-text">Đang tải… 0%</p>
+          </div>
+          <button id="start-btn" class="hidden">Bắt đầu · Tap to start</button>
+          <p id="hint" class="hidden">Nhấn nút <b>Nuôi Sen</b> để cây sen lớn lên 🌸</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
