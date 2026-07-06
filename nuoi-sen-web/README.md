@@ -2,9 +2,9 @@
 https://mikengovn.github.io/nuoi-sen/
 
 The **VietMoney "Nuôi Sen"** mini-game was built in plain
-HTML5 + Canvas + JavaScript from the original `main.py` by Michael Ngo @ EUI VietMoney in 2025.<br> 
-The target of the game is to build deep and profitable customer life-cycle through this gamification, <br>
-boosting interactions and retention rates of the VietMoney Remittance APP.<br>
+HTML5 + Canvas + JavaScript from the original `main.py` by Michael Ngo @ EUI VietMoney in 2025. 
+The target of the game is to build deep and profitable customer life-cycle through this gamification,
+boosting interactions and retention rates of the VietMoney Remittance APP.
 
 | Feature            | Description                                                                |
 | ------------------ | -------------------------------------------------------------------------- |
