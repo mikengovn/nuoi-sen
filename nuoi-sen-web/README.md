@@ -2,16 +2,19 @@
 https://mikengovn.github.io/nuoi-sen/
 
 The **VietMoney "Nuôi Sen"** mini-game was built in plain
-HTML5 + Canvas + JavaScript from the original `main.py` by Michael Ngo @ EUI VietMoney in 2025. 
-The target of the game is to build deep and profitable customer life-cycle through this gamification, 
-boosting interactions and retention rates of the VietMoney Remittance APP.
+HTML5 + Canvas + JavaScript from the original `main.py` by Michael Ngo @ EUI VietMoney in 2025.<br> 
+The target of the game is to build deep and profitable customer life-cycle through this gamification, <br>
+boosting interactions and retention rates of the VietMoney Remittance APP.<br>
 
-**Core Mechanic**     → Virtual lotus flower-growing with the frequency of money transfers within the APP. 
-**Primary Goal**      → Increase remittance activity and user retention
-**Rewards**           → Gifts every round, lottery opportunities, final real gold-asset prizes
-**Progress Tracking** → Levels (e.g., Level 7/9), XP progress
-**Social Features**   → Ranking, Grow Lotus Together
-**Other Elements**    → Daily tasks, time-limited offers
+| Feature            | Description                                                                |
+| ------------------ | -------------------------------------------------------------------------- |
+| 🌸 Core Mechanic   | Grow a virtual lotus based on remittance activity                          |
+| 🎯 Primary Goal    | Increase remittance frequency and customer retention                       |
+| 🎁 Rewards         | Gifts each round, lottery entries, and real gold prizes at the final stage |
+| 📈 Progression     | XP system with multiple lotus growth levels                                |
+| 👥 Social Features | Rankings and collaborative "Grow Lotus Together" mode                      |
+| ⏰ Live Events      | Daily missions and limited-time offers                                     |
+
 
 Users need to complete missions or remit to obtain chance to grow the lotus Tap the **Nuôi Sen**
 button to grow your lotus mascot, fill the progress bar toward the final gift, and reach the golden bloom.
@@ -26,20 +29,20 @@ button to grow your lotus mascot, fill the progress bar toward the final gift, a
 
 - Consider organizing them into 5 main growth stages with 2 variations per stage for distinct designs:
 
-**Baby Bud 1**: Tiny closed bud, pale pink, small shy face, tiny beige hat.
-**Baby Bud 2**: Closed bud with a leaf accessory, curious expression.
-**Opening Bud 1**: Slightly open bud, light pink petals, small hat, timid smile.
-**Opening Bud 2**: Bud with a few petals, yellow star pin, confident grin.
-**Half-Bloom 1**: Half-open lotus, medium pink petals, hat, cheerful smile.
-**Half-Bloom 2**: Half-open with red shirt, playful wink.
-**Near-Mature 1**: Mostly open lotus, bright pink petals, full hat, joyful face.
-**Near-Mature 2**: Near-bloom with red overalls, coin accessory, big smile.
-**Mature 1**: Full bloom, vibrant pink petals, hat, red/yellow outfit with confident stance.
+**Baby Bud 1**: Tiny closed bud, pale pink, small shy face, tiny beige hat.<br>
+**Baby Bud 2**: Closed bud with a leaf accessory, curious expression.<br>
+**Opening Bud 1**: Slightly open bud, light pink petals, small hat, timid smile.<br>
+**Opening Bud 2**: Bud with a few petals, yellow star pin, confident grin.<br>
+**Half-Bloom 1**: Half-open lotus, medium pink petals, hat, cheerful smile.<br>
+**Half-Bloom 2**: Half-open with red shirt, playful wink.<br>
+**Near-Mature 1**: Mostly open lotus, bright pink petals, full hat, joyful face.<br>
+**Near-Mature 2**: Near-bloom with red overalls, coin accessory, big smile.<br>
+**Mature 1**: Full bloom, vibrant pink petals, hat, red/yellow outfit with confident stance.<br>
 **Mature 2**: Full bloom, alternate outfit color (e.g., yellow overalls), proud expression.
 
-**Cultural Elements**
-The lotus, widely considered a symbol of Vietnam, has long been used as a metaphor to describe Vietnamese people: 
-from the mud grows a strong and resilient flower. Using lotus and conical hat - nón lá, which have been 
+**🇻🇳 Cultural Elements**
+The lotus, widely considered a symbol of Vietnam, has long been used as a metaphor to describe Vietnamese people:<br>
+from the mud grows a strong and resilient flower. Using lotus and conical hat - nón lá, which have been <br>
 the familiar companion, evoking the simple and rustic beauty of Vietnamese diasporas living abroad. 
 
 ---
@@ -78,17 +81,6 @@ nuoi-sen-web/
 - Tap **Nuôi Sen** to fertilize — the mascot hops, hearts burst, and it grows one stage.
 - The bar fills toward the 🎁 gift; reach stage 9 (the golden lotus) to see **"Sen đã nở!"**.
 - **↻** (top-left) restarts. **🔊 / 🔇** (top-right) toggles sound.
-
----
-
-## 🛠️ Notes on the port
-
-- The canvas renders in the original **736 × 1318** logical space (scaled to fit any screen
-  crisply via `devicePixelRatio`), so every element keeps its exact position from `main.py`.
-- The two `petal.gif` / `heart.gif` animations (500+ frames combined) are replaced by
-  lightweight JavaScript particle systems that reproduce the same effect at any resolution.
-- Audio uses `HTMLAudioElement`, which works from `file://` and satisfies mobile
-  gesture/autoplay rules once you tap **Start**.
 
 ---
 
