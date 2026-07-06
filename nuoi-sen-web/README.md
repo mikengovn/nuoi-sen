@@ -1,82 +1,52 @@
 # 🌸 Nuôi Sen (Grow Lotus) — Web Game
+https://mikengovn.github.io/nuoi-sen/
 
-A phone-friendly web version of the **VietMoney "Nuôi Sen"** mini-game, rebuilt in plain
-HTML5 + Canvas + JavaScript from the original `main.py` (pygame). Tap the **Nuôi Sen**
-button to grow your lotus mascot through **9 evolving stages**, fill the progress bar toward
-the gift, and reach the golden bloom.
+The **VietMoney "Nuôi Sen"** mini-game was built in plain
+HTML5 + Canvas + JavaScript from the original `main.py` by Michael Ngo @ EUI VietMoney in 2025. 
+The target of the game is to build deep and profitable customer life-cycle through this gamification, 
+boosting interactions and retention rates of the VietMoney Remittance APP.
 
-No build tools, no frameworks, no server code — just static files. It runs by opening
-`index.html`, and it's ready to publish to **GitHub Pages** for public viewing.
+**Core Mechanic**     → Virtual lotus flower-growing with the frequency of money transfers within the APP. 
+**Primary Goal**      → Increase remittance activity and user retention
+**Rewards**           → Gifts every round, lottery opportunities, final real gold-asset prizes
+**Progress Tracking** → Levels (e.g., Level 7/9), XP progress
+**Social Features**   → Ranking, Grow Lotus Together
+**Other Elements**    → Daily tasks, time-limited offers
+
+Users need to complete missions or remit to obtain chance to grow the lotus Tap the **Nuôi Sen**
+button to grow your lotus mascot, fill the progress bar toward the final gift, and reach the golden bloom.
 
 ---
 
-## ✨ Features
+## ✨ Design Guidelines
 
-- **Faithful to the original** — same 9 lotus stages, curtain intro, "Nuôi Sen" button,
-  progress bar, gift box, background music, and level-up sound (with music ducking).
-- **Phone-first** — responsive portrait layout, touch controls, safe-area (notch) support,
-  no accidental scroll/zoom.
-- **Light & fast** — ~1.3 MB of assets total (the original pygame→WASM build was ~6.7 MB
-  plus the Python runtime). Petals and the heart burst are drawn procedurally, so no heavy
-  GIF frames are shipped.
-- **Extra web niceties** — 🔊 mute toggle, ↻ replay, a loading screen, and a completion
-  celebration.
+**Stages of Growth**
+
+- The 10 mascots should represent a progression from a baby lotus bud to a fully mature, blooming lotus.
+
+- Consider organizing them into 5 main growth stages with 2 variations per stage for distinct designs:
+
+**Baby Bud 1**: Tiny closed bud, pale pink, small shy face, tiny beige hat.
+**Baby Bud 2**: Closed bud with a leaf accessory, curious expression.
+**Opening Bud 1**: Slightly open bud, light pink petals, small hat, timid smile.
+**Opening Bud 2**: Bud with a few petals, yellow star pin, confident grin.
+**Half-Bloom 1**: Half-open lotus, medium pink petals, hat, cheerful smile.
+**Half-Bloom 2**: Half-open with red shirt, playful wink.
+**Near-Mature 1**: Mostly open lotus, bright pink petals, full hat, joyful face.
+**Near-Mature 2**: Near-bloom with red overalls, coin accessory, big smile.
+**Mature 1**: Full bloom, vibrant pink petals, hat, red/yellow outfit with confident stance.
+**Mature 2**: Full bloom, alternate outfit color (e.g., yellow overalls), proud expression.
+
+**Cultural Elements**
+The lotus, widely considered a symbol of Vietnam, has long been used as a metaphor to describe Vietnamese people: 
+from the mud grows a strong and resilient flower. Using lotus and conical hat - nón lá, which have been 
+the familiar companion, evoking the simple and rustic beauty of Vietnamese diasporas living abroad. 
 
 ---
 
 ## ▶️ Run it locally
 
-**Easiest:** double-click `index.html` — it opens in your browser and works offline.
-
-**If audio doesn't start** on a double-clicked file (some browsers restrict `file://`),
-run a tiny local server instead:
-
-```bash
-# from inside this folder
-python3 -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
-
-Tap **"Bắt đầu · Tap to start"** once — this is required so the browser allows the music
-to play (all browsers block autoplay until the first tap).
-
----
-
-## 🚀 Publish to GitHub Pages (public link)
-
-### Option A — GitHub website (no command line)
-
-1. Create a new repository on GitHub, e.g. **`nuoi-sen`** (Public).
-2. Click **Add file → Upload files**, then drag in **everything inside this folder**
-   (`index.html`, `style.css`, `game.js`, the `assets/` folder, and `.nojekyll`).
-   > Keep the structure — `index.html` must be at the repository root.
-3. Commit the files.
-4. Go to **Settings → Pages**.
-5. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-6. Select branch **`main`** and folder **`/ (root)`**, then **Save**.
-7. Wait ~1 minute. Your game will be live at:
-
-   ```
-   https://<your-username>.github.io/nuoi-sen/
-   ```
-
-### Option B — Command line (git)
-
-```bash
-cd nuoi-sen-web                 # this folder
-
-git init
-git add .
-git commit -m "Nuôi Sen web game"
-git branch -M main
-git remote add origin https://github.com/<your-username>/nuoi-sen.git
-git push -u origin main
-```
-
-Then enable Pages via **Settings → Pages → Deploy from a branch → main / root**.
-
-> Tip: to host it at `https://<your-username>.github.io/` (no sub-path), name the repo
-> exactly `<your-username>.github.io`.
+**Double-click** `index.html` — it opens in your browser and works offline.
 
 ---
 
@@ -123,4 +93,4 @@ nuoi-sen-web/
 ---
 
 *Built from the original `nuoi_sen` pygame project. Mascot art, logo, sounds, and background
-belong to their respective owners (VietMoney).*
+belong to their respective owners (Michael Ngo).*
