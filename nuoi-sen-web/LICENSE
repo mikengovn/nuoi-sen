@@ -1,0 +1,92 @@
+# License — Nuôi Sen (Grow Lotus) Web Game
+
+## Source Code License
+
+The original source code of this web implementation (HTML, CSS, JavaScript) is licensed under the **MIT License**:
+
+```
+MIT License
+
+Copyright (c) 2026 [Your Name/GitHub Username]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### What you can do with the source code:
+- ✅ Use, modify, and distribute the HTML, CSS, and JavaScript
+- ✅ Fork and adapt it for your own projects
+- ✅ Build upon it or integrate it into other projects
+- ✅ Sell or use commercially (with attribution)
+
+---
+
+## Game Assets License
+
+The following assets belong to **VietMoney** and are used here with permission for
+non-commercial fan/community purposes:
+
+- **Lotus mascot character sprites** (`lotus1.png` – `lotus9.png`)
+- **Logo** (`logo.png`)
+- **Button artwork** (`button_image.png`)
+- **Gift box** (`gift_box.png`)
+- **Background image** (`background1.jpg`)
+- **Loading bar elements** (`loading_bar_*.png`)
+- **Curtain graphics** (`curtain.png`)
+- **Audio tracks** (`music.mp3`, `yay.mp3`)
+
+### What you can do with the assets:
+- ✅ Play the game
+- ✅ Share and redistribute the game as-is (including assets)
+- ✅ Use for personal, educational, or fan purposes
+
+### What you cannot do with the assets:
+- ❌ Modify or derivative works of the art/audio without permission
+- ❌ Use the assets in commercial projects or for commercial gain
+- ❌ Claim ownership of the VietMoney branding or artwork
+- ❌ Sell or license the assets separately
+
+---
+
+## Original Game
+
+This web version is a faithful recreation of the original **Nuôi Sen** mini-game created
+by **VietMoney**. For the original game and more information, visit:
+- https://www.vietnamoney.vn/ or the original app source
+
+---
+
+## Attribution
+
+When you use, share, or adapt this game, please provide credit:
+
+**"Nuôi Sen web version based on the VietMoney mini-game. Web implementation 
+by [Your GitHub URL]. Original art and audio by VietMoney."**
+
+---
+
+## Questions?
+
+For questions about licensing:
+- **Source code**: This project is on GitHub — feel free to fork, modify, and redistribute
+  per the MIT License.
+- **Assets/branding**: Contact **VietMoney** for commercial or derivative use permissions.
+
+---
+
+*Last updated: July 2026*
