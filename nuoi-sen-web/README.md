@@ -41,9 +41,7 @@ button to grow your lotus mascot, fill the progress bar toward the final gift, a
 **Mature 2**: Full bloom, alternate outfit color (e.g., yellow overalls), proud expression.
 
 **🇻🇳 Cultural Elements**
-The lotus, widely considered a symbol of Vietnam, has long been used as a metaphor to describe Vietnamese people:<br>
-from the mud grows a strong and resilient flower. Using lotus and conical hat - nón lá, which have been a familiar companion,<br>
-evoking the simple and rustic beauty of Vietnamese diasporas living abroad. 
+The lotus, widely considered a symbol of Vietnam, has long been used as a metaphor to describe Vietnamese people: from the mud grows a strong and resilient flower. Using lotus and conical hat - nón lá, which have been a familiar companion, evoking the simple and rustic beauty of Vietnamese diasporas living abroad. 
 
 ---
 
